@@ -9,6 +9,8 @@ COPY config.json /etc/ntripcaster
 
 RUN apt-get install git libev-dev -y
 
+RUN cd /root
+
 RUN git clone https://github.com/tisyang/ntripcaster.git \
   && cd ntripcaster \
   && git submodule update --init \
